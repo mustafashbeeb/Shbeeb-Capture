@@ -26,3 +26,6 @@ The APK is generated at `app/build/outputs/apk/debug/app-debug.apk`.
 ## Audio
 
 Android limits system audio capture. The prototype records microphone audio. Full system/internal audio or combined microphone and system audio requires a device-compatible implementation and may vary by Android version and OEM.
+## خريطة التطبيق
+
+راجع [خريطة التطبيق](docs/APP_MAP.md) لمعرفة تدفق الشاشات، بنية المشروع، حالة الميزات، وأولويات التطوير.
