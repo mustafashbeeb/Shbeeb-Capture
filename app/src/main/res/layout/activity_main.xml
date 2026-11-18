@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1020"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shbeeb Capture"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="نسخة تجريبية للعرض والاختبار"
+            android:textColor="#98A3BE"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="نمط التسجيل"
+            android:textColor="#AEB8D3"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/screenButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="شاشة كاملة" />
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="1dp" />
+            <Button
+                android:id="@+id/screenshotButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="لقطة شاشة" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="الصوت"
+            android:textColor="#AEB8D3"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/audioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <RadioButton
+                android:id="@+id/micRadio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:checked="true"
+                android:text="الميكروفون"
+                android:textColor="#FFFFFF" />
+            <RadioButton
+                android:id="@+id/systemRadio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="صوت النظام"
+                android:textColor="#FFFFFF" />
+            <RadioButton
+                android:id="@+id/bothRadio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="الميكروفون وصوت النظام"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/touchSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:text="إظهار أثر اللمس"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="جاهز"
+            android:textColor="#98A3BE" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="20dp"
+            android:text="بدء التسجيل"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:enabled="false"
+            android:text="إيقاف" />
+    </LinearLayout>
+</ScrollView>
