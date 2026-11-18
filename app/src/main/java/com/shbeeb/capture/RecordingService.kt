@@ -64,16 +64,17 @@ class RecordingService : Service() {
         registerReceiver(stopReceiver, IntentFilter(ACTION_STOP), RECEIVER_NOT_EXPORTED)
     }
 
+    override fun onDestroy() {
+        unregisterReceiver(stopReceiver)
+        super.onDestroy()
+    }
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent?.action == ACTION_STOP) {
             stopRecording()
             return START_NOT_STICKY
         }
 
-        override fun onDestroy() {
-            unregisterReceiver(stopReceiver)
-            super.onDestroy()
-        }
         if (intent?.action == ACTION_SCREENSHOT) {
             startForegroundNotification("Preparing screenshot")
             createProjection(intent)
